@@ -84,6 +84,26 @@
         &:extend(.abs-control-checkbox all);
     }
 
+    .admin__scope-old {
+        input[type="radio"] {
+            border-radius: 8px;
+    
+            &:checked {
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: ~'calc(50% - 3px)';
+                    left: ~'calc(50% - 3px)';
+                    display: block;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 10px;
+                    background: currentColor;
+                }
+            }
+        }
+    }
+
     input[disabled],
     select[disabled],
     textarea[disabled],
