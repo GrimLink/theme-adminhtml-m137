@@ -84,25 +84,24 @@
         &:extend(.abs-control-checkbox all);
     }
 
-    .admin__scope-old {
-        input[type="radio"] {
-            border-radius: 8px;
-    
-            &:checked {
-                &:after {
-                    content: '';
-                    position: absolute;
-                    top: ~'calc(50% - 3px)';
-                    left: ~'calc(50% - 3px)';
-                    display: block;
-                    width: 10px;
-                    height: 10px;
-                    border-radius: 10px;
-                    background: currentColor;
-                }
+    input[type="radio"] {
+        border-radius: 8px;
+
+        &:checked {
+            &:after {
+                content: '';
+                position: absolute;
+                top: ~'calc(50% - 3px)';
+                left: ~'calc(50% - 3px)';
+                display: block;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: currentColor;
             }
         }
     }
+
 
     input[disabled],
     select[disabled],
@@ -156,7 +155,7 @@
     .fieldset > .legend {
         border-bottom: 0;
         margin-bottom: @indent__l;
-        
+
         .title {
             &:extend(h3);
             margin-bottom: 0;
@@ -216,7 +215,7 @@
         border-bottom: 0;
         margin-bottom: @indent__l;
         padding: 0;
-        
+
         .title,
         span.title {
             &:extend(h3);
@@ -390,7 +389,7 @@
             &:extend(.abs-action-secondary all);
         }
     }
-    
+
     .fieldset-wrapper,
     .fieldset {
         padding-top: 0;
@@ -435,17 +434,17 @@
                             @_icon-font-color-active: @neutral-20,
                             @_icon-font-position: after
                         );
-                         
+
                         color: @neutral-20;
                         width: 3.6rem;
                         height: 3.6rem;
                         text-align: center;
-                
+
                         img {
                             display: none;
                         }
                     }
-            
+
                     a[id*='widget-apply'] {
                         .lib-icon-font(
                             @icon-check-mage__content,
@@ -454,9 +453,9 @@
                             @_icon-font-line-height: 1,
                             @_icon-font-position: after
                         );
-                        
+
                         &:extend(.abs-action-secondary all);
-                
+
                         img {
                             display: none;
                         }
@@ -475,7 +474,7 @@
 .admin__scope-old {
     .admin__collapsible-block-wrapper {
         &.fieldset-wrapper {
-            padding: 0;        
+            padding: 0;
         }
     }
 }
@@ -563,7 +562,7 @@
     }
 
     .control {
-        ._has-datepicker {            
+        ._has-datepicker {
             &:extend(._has-datepicker all);
         }
     }
@@ -628,7 +627,7 @@
                     color: @text__color;
                     font-weight: @font-weight__heavier;
                 }
-            } 
+            }
         }
     }
 }
@@ -667,7 +666,7 @@
                 position: relative;
                 z-index: 2;
             }
-            
+
             .x-tree {
                 margin-top: 0 !important;
             }
@@ -690,13 +689,13 @@
             }
         }
     }
-    
+
     .attribute-set-col {
         .fieldset > .legend span {
             &:extend(h3);
             margin-bottom: 0;
         }
-        
+
         #set_name {
             padding-bottom: 0 !important;
         }
